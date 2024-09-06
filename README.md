@@ -7,6 +7,7 @@ This is an early WIP as I migrate from NixOS, but I will update this repository 
 Changes on this image so far:
  - Install tailscale
  - Remove wofi
+ - Remove foot
 
 
 ## Installation
