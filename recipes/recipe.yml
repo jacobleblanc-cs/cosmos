@@ -1,7 +1,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: andromeda
 # description will be included in the image's metadata
-description: My FW13 Laptop Configuration
+description: My Laptop Configuration
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/secureblue/wayblue-hyprland-main-userns-hardened
@@ -19,13 +19,10 @@ modules:
     repos:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
+      - tailscale
       # - micro
-      # - starship
     remove:
-      # example: removing firefox (in favor of the flatpak)
-      # "firefox" is the main package, "firefox-langpacks" is a dependency
-      # - firefox
-      # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+      wofi
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
