@@ -1,4 +1,4 @@
-# Andromeda Configuration &nbsp; [![bluebuild build badge](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
+# Andromeda Configuration &nbsp; [![bluebuild build badge](https://github.com/jacobleblanc-cs/andromeda/actions/workflows/build.yml/badge.svg)](https://github.com/jacobleblanc-cs/andromeda/actions/workflows/build.yml)
 
 This is a custom BlueBuild image for my personal laptop/workstation, which I call andromeda. It is based on a SecureBlue image which is itself based on Wayblue's Hyprland image.
 
