@@ -1,10 +1,10 @@
 # image will be published to ghcr.io/<user>/<name>
-name: template
+name: andromeda
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: My FW13 Laptop Configuration
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/secureblue/wayblue-hyprland-main-userns-hardened
 image-version: 40 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
