@@ -34,6 +34,8 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
 
+Please note that you CANNOT rebase from SecureBlue into this image, as SecureBlue's policies do not allow it. Rebase into an image known to SecureBlue first, such as any of those it is built on top of, and then into the custom image.
+
 
 ## Verification
 
