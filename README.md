@@ -1,6 +1,6 @@
 # Andromeda Configuration &nbsp; [![bluebuild build badge](https://github.com/jacobleblanc-cs/andromeda/actions/workflows/build.yml/badge.svg)](https://github.com/jacobleblanc-cs/andromeda/actions/workflows/build.yml)
 
-This is a [custom BlueBuild image](https://github.com/blue-build/template) for my personal laptop/workstation, which I call andromeda. It is based on a [SecureBlue](https://github.com/secureblue/secureblue) image which is itself based on [Wayblue](https://github.com/wayblueorg/wayblue)'s Hyprland image.
+This is a [custom BlueBuild image](https://github.com/blue-build/template) for my personal laptop/workstation. It is based on a [SecureBlue](https://github.com/secureblue/secureblue) image which is itself based on [Wayblue](https://github.com/wayblueorg/wayblue)'s Hyprland image.
 
 This is an early WIP as I migrate from NixOS, but I will update this repository as changes come up. Do note that most of my package management and configuration are done through Nix + Home-Manager, installed via the Determinate Systems Installer. Nix configuration will be included soon.
 
@@ -34,9 +34,6 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
 
-## ISO
-
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
 
 ## Verification
 
