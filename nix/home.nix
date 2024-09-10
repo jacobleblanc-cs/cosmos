@@ -11,6 +11,9 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    (writeShellScriptBin "nix-upgrade" ''
+      home-manager switch --flake /var/home/jacob/andromeda/nix#jacob --impure
+    ''
     fira-code-nerdfont
     pfetch-rs
     cosign
