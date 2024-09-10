@@ -2,7 +2,7 @@
 
 This is a [custom BlueBuild image](https://github.com/blue-build/template) for my personal laptop/workstation. It is based on a [SecureBlue](https://github.com/secureblue/secureblue) image which is itself based on [Wayblue](https://github.com/wayblueorg/wayblue)'s Hyprland image.
 
-This is an early WIP as I migrate from NixOS, but I will update this repository as changes come up. Do note that most of my package management and configuration are done through Nix + Home-Manager, installed via the Determinate Systems Installer. Nix configuration will be included soon.
+This is an early WIP as I migrate from NixOS, but I will update this repository as changes come up. Do note that most of my package management and configuration is done through Nix + Home-Manager, installed via the Determinate Systems Installer.
 
 Changes on this image so far:
  - Install tailscale
