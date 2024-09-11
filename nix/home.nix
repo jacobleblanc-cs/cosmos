@@ -17,6 +17,10 @@
     fira-code-nerdfont
     pfetch-rs
     cosign
+    nwg-look
+    qt5ct
+    qt6ct
+    cliphist
     nixgl.auto.nixGLDefault
   ];
 
