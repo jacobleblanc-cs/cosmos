@@ -20,6 +20,7 @@
     qt6ct
     cliphist
     unstable.zed-editor
+    caffeine-ng
     nixgl.auto.nixGLDefault
   ];
 
