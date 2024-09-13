@@ -6,8 +6,6 @@
 
   home.stateVersion = "24.05";
 
-  nixpkgs.config.allowUnfree = true;
-
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
@@ -21,8 +19,13 @@
     qt5ct
     qt6ct
     cliphist
+    unstable.zed-editor
     nixgl.auto.nixGLDefault
   ];
+
+#  home.packages = with pkgsUnstable; [
+#    zed-editor
+#  ];
 
   # Import applications with configurations from apps/ directory
   imports = [
