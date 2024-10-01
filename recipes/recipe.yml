@@ -4,7 +4,7 @@ name: andromeda
 description: My Laptop Configuration
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/secureblue/wayblue-hyprland-main-userns-hardened
+base-image: ghcr.io/secureblue/silverblue-main-userns-hardened
 image-version: 40 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -20,11 +20,8 @@ modules:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
       - tailscale
-      - hyprlock
       # - micro
     remove:
-      - wofi
-      - foot
 
         #- type: default-flatpaks
         #notify: true # Send notification after install/uninstall is finished (true/false)

@@ -15,7 +15,6 @@
     fira-code-nerdfont
     pfetch-rs
     cosign
-    nwg-look
     qt5ct
     qt6ct
     cliphist
@@ -39,11 +38,11 @@
     ./apps/git.nix
     ./apps/bash.nix
     ./apps/starship.nix
-    ./apps/hyprpaper.nix
+    #./apps/hyprpaper.nix
     ./apps/spotify.nix
     ./apps/zathura.nix
     #./apps/hyprlock.nix
-    ./apps/hypridle.nix
+    #./apps/hypridle.nix
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
