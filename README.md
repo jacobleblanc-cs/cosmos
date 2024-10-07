@@ -1,14 +1,11 @@
-# Andromeda Configuration &nbsp; [![bluebuild build badge](https://github.com/jacobleblanc-cs/andromeda/actions/workflows/build.yml/badge.svg)](https://github.com/jacobleblanc-cs/andromeda/actions/workflows/build.yml)
+# Cosmos Configuration &nbsp; [![bluebuild build badge](https://github.com/jacobleblanc-cs/cosmos/actions/workflows/build.yml/badge.svg)](https://github.com/jacobleblanc-cs/cosmos/actions/workflows/build.yml)
 
-This is a [custom BlueBuild image](https://github.com/blue-build/template) for my personal laptop/workstation. It is based on a [SecureBlue](https://github.com/secureblue/secureblue) image which is itself based on [Wayblue](https://github.com/wayblueorg/wayblue)'s Hyprland image.
+This is a [custom BlueBuild image](https://github.com/blue-build/template) for my personal workstation(s). It is based on a [SecureBlue](https://github.com/secureblue/secureblue) image which is itself based on Silverblue.
 
 This is an early WIP as I migrate from NixOS, but I will update this repository as changes come up. Do note that most of my package management and configuration is done through Nix + Home-Manager, installed via the Determinate Systems Installer.
 
 Changes on this image so far:
  - Install tailscale
- - Install hyprlock
- - Remove wofi
- - Remove foot
 
 
 ## Installation
@@ -18,7 +15,7 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/jacobleblanc-cs/andromeda:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/jacobleblanc-cs/cosmos:latest
   ```
 - Reboot to complete the rebase:
   ```
@@ -26,7 +23,7 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
 - Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/jacobleblanc-cs/andromeda:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/jacobleblanc-cs/cosmos:latest
   ```
 - Reboot again to complete the installation
   ```
@@ -43,5 +40,5 @@ Please note that you CANNOT rebase from SecureBlue into this image, as SecureBlu
 These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/jacobleblanc-cs/andromeda
+cosign verify --key cosign.pub ghcr.io/jacobleblanc-cs/cosmos
 ```
