@@ -35,6 +35,7 @@ modules:
       - io.github.zen_browser.zen
       - com.mattjakeman.ExtensionManager
       - com.github.tchx84.Flatseal
+      - md.obsidian.Obsidian
 
       #remove:
       # - org.gnome.eog
