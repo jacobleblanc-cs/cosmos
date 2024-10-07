@@ -21,6 +21,7 @@ modules:
     install:
       - tailscale
       - papirus-icon-theme
+      - trayscale
     remove:
 
   - type: default-flatpaks
