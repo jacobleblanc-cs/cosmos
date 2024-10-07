@@ -22,6 +22,7 @@ modules:
       - tailscale
       - papirus-icon-theme
       - trayscale
+      - syncthing
     remove:
 
   - type: default-flatpaks
