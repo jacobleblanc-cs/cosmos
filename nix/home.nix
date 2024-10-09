@@ -30,7 +30,7 @@
   imports = [
     ./apps/kitty.nix
     ./apps/neovim.nix
-    ./apps/syncthing.nix
+    #./apps/syncthing.nix
     ./apps/nix-direnv.nix
     ./apps/zsh.nix
     ./apps/btop.nix
