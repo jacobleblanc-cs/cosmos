@@ -10,7 +10,7 @@
   # environment.
   home.packages = with pkgs; [
     (writeShellScriptBin "nix-upgrade" ''
-      home-manager switch --flake /var/home/jacob/andromeda/nix#jacob --impure
+      home-manager switch --flake /var/home/jacob/cosmos/nix#jacob --impure
     '')
     fira-code-nerdfont
     pfetch-rs
@@ -22,26 +22,19 @@
     nixgl.auto.nixGLDefault
   ];
 
-#  home.packages = with pkgsUnstable; [
-#    zed-editor
-#  ];
 
   # Import applications with configurations from apps/ directory
   imports = [
     ./apps/kitty.nix
     ./apps/neovim.nix
-    #./apps/syncthing.nix
     ./apps/nix-direnv.nix
     ./apps/zsh.nix
     ./apps/btop.nix
     ./apps/git.nix
     ./apps/bash.nix
     ./apps/starship.nix
-    #./apps/hyprpaper.nix
     ./apps/spotify.nix
     ./apps/zathura.nix
-    #./apps/hyprlock.nix
-    #./apps/hypridle.nix
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -75,9 +68,9 @@
   #
   #  /etc/profiles/per-user/jacob/etc/profile.d/hm-session-vars.sh
   #
-  #home.sessionVariables = {
-  #  # EDITOR = "emacs";
-  #};
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
