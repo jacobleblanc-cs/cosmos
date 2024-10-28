@@ -14,6 +14,8 @@ ToDo:
  - Automate Nix setup
  - Automate flatpak installations
  - Automate PaperWM installation
+ - Add gsettings overrides
+ - Add keybinds to recipe
 
 
 ## Installation
