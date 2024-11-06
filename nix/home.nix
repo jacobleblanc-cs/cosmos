@@ -20,6 +20,7 @@
     cliphist
     unstable.zed-editor
     nixgl.auto.nixGLDefault
+    vscodium
   ];
 
 
