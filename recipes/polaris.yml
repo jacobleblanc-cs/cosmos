@@ -1,7 +1,7 @@
 # image will be published to ghcr.io/<user>/<name>
-name: andromeda
+name: polaris
 # description will be included in the image's metadata
-description: My Laptop Configuration
+description: My Workstation Configuration
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/secureblue/silverblue-main-userns-hardened
