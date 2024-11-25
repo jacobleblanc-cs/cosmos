@@ -1,11 +1,11 @@
 # image will be published to ghcr.io/<user>/<name>
-name: polaris
+name: andromeda
 # description will be included in the image's metadata
-description: My Workstation Configuration
+description: My Laptop Configuration
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/secureblue/silverblue-main-userns-hardened
-image-version: 40 # latest is also supported if you want new updates ASAP
+image-version: 41 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -26,25 +26,25 @@ modules:
       - gnome-shell-extension-appindicator
       - gnome-shell-extension-caffeine
       - gnome-shell-extension-dash-to-dock
-      - gnome-shell-extension-forge
       - gnome-shell-extension-just-perfection
+      - sushi
     remove:
 
-  - type: default-flatpaks
-    notify: true # Send notification after install/uninstall is finished (true/false)
-    system:
-      # If no repo information is specified, Flathub will be used by default
-    repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-    repo-name: flathub
-    repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
-    install:
-      - io.github.zen_browser.zen
-      - com.mattjakeman.ExtensionManager
-      - com.github.tchx84.Flatseal
-      - md.obsidian.Obsidian
+      #- type: default-flatpaks
+      #  notify: true # Send notification after install/uninstall is finished (true/false)
+      #  system:
+      #    # If no repo information is specified, Flathub will be used by default
+      #  repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      #  repo-name: flathub
+      #  repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      #  install:
+      #    - io.github.zen_browser.zen
+      #    - com.mattjakeman.ExtensionManager
+      #    - com.github.tchx84.Flatseal
+      #    - md.obsidian.Obsidian
 
-      #remove:
-      # - org.gnome.eog
+      #    #remove:
+      #    # - org.gnome.eog
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
