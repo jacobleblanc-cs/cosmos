@@ -2,7 +2,7 @@
 
 This is a [custom BlueBuild image](https://github.com/blue-build/template) for my personal workstation(s). It is based on a [SecureBlue](https://github.com/secureblue/secureblue) image which is itself based on Silverblue.
 
-This is an early WIP as I migrate from NixOS, but I will update this repository as changes come up. Do note that a lot of my package management and configuration is done through Nix + Home-Manager, installed via the Determinate Systems Installer, so fully replicating these systems requires installing and configuring Nix.
+This image can be considered a constant work in progress, as it is my daily driver and subject to frequent alteration. As this is my personal image it is highly opinionated and based around my specific hardware and software needs. While you shouldn't run this yourself for the aforementioned reasons, I hope this repo can act as inspiration towards your own custom images based on BlueBuild.
 
 Changes on this image so far:
  - Install tailscale + trayscale
