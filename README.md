@@ -9,11 +9,10 @@ Changes on this image so far:
  - Install syncthing
  - Add common Gnome shell extensions
  - Add Papirus icon theme
+ - Automatic installation of Nix with Flakes using the [Determinate Nix installer](https://github.com/DeterminateSystems/nix-installer)
 
 ToDo:
- - Automate Nix setup
- - Automate flatpak installations
- - Automate PaperWM installation
+ - Automate full flathub activation & flatpak installations
  - Add gsettings overrides
  - Add keybinds to recipe
 
