@@ -12,6 +12,7 @@ Changes on this image so far:
  - Automatic installation of Nix with Flakes using the [Determinate Nix installer](https://github.com/DeterminateSystems/nix-installer)
 
 ToDo:
+ - Automate nix configuration
  - Automate full flathub activation & flatpak installations
  - Add gsettings overrides
  - Add keybinds to recipe
