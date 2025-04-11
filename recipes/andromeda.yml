@@ -31,7 +31,7 @@ modules:
       - asusctl
       - asusctl-rog-gui
     replace:
-      - from-repo: https://copr.fedorainfracloud.org/coprs/lukenukem/asus-linux/repo/fedora-%OS_VERSION%/lukenukem-asus-linux-fedora-%OS_VERSION%.repo
+      - from-repo: https://copr.fedorainfracloud.org/coprs/lukenukem/asus-kernel/repo/fedora-%OS_VERSION%/lukenukem-asus-kernel-fedora-%OS_VERSION%.repo
         packages:
           - kernel
           - kernel-core
