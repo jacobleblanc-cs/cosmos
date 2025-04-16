@@ -9,7 +9,9 @@ Changes on this image so far:
  - Install syncthing
  - Add common Gnome shell extensions
  - Add Papirus icon theme
- - Automatic installation of Nix with Flakes using the [Determinate Nix installer](https://github.com/DeterminateSystems/nix-installer)
+ - Install asus-linux packages for `andromeda`
+ - Automatic installation of Nix with Flakes using the [Determinate Nix installer](https://github.com/DeterminateSystems/nix-installer) (Not yet fully functional)
+ 
 
 ToDo:
  - Automate nix configuration
