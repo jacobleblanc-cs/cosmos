@@ -70,7 +70,7 @@ modules:
         - com.mattjakeman.ExtensionManager
         - com.github.tchx84.Flatseal
         - md.obsidian.Obsidian
-        - io.github.zen_browser.zen
+        - app.zen_browser.zen
         - com.discordapp.Discord
         - org.signal.Signal
         - chat.delta.desktop
