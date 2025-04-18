@@ -55,14 +55,14 @@ modules:
       
   - type: script
     snippets:
-      - "flatpak remote-add --if-not-exists --user flathub-full https://flathub.org/repo/flathub.flatpakrepo"
+      - "flatpak remote-add --if-not-exists --user flathub-full https://dl.flathub.org/repo/flathub.flatpakrepo"
     scripts:
       - installNix.sh
 
   - type: default-flatpaks
     notify: true
     user:
-      repo-url: https://flathub.org/repo/flathub.flatpakrepo
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub-full
       repo-title: "Flathub (User)"
       install:
