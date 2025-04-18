@@ -70,5 +70,17 @@ modules:
         - com.github.tchx84.Flatseal
         - md.obsidian.Obsidian
         - io.github.zen_browser.zen
+        - com.discordapp.Discord
+        - org.signal.Signal
+        - chat.delta.desktop
+        - chat.simplex.simplex
+        - im.riot.Riot
+        - ch.protonmail.protonmail-bridge
+        - dev.deedles.Trayscale
+        - app.bluebubbles.BlueBubbles
+        - com.github.johnfactotum.Foliate
+        - com.github.scrivanolabs.scrivano
+        - com.github.flxzt.rnote
+        - com.adilhanney.saber
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
