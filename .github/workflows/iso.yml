@@ -1,0 +1,30 @@
+name: Build ISO
+
+on:
+  workflow_run:
+    #workflows: ["bluebuild"]  # Name of the workflow that triggers this one
+    types:
+      - completed
+  workflow_dispatch:  # Allows manual triggering of the workflow
+
+jobs:
+  build_iso:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Podman
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y podman
+
+      - name: Install Bluebuild
+        run: |
+          docker run --pull always --rm ghcr.io/blue-build/cli:latest-installer | bash
+
+      - name: Generate ISO
+        run: |
+          sudo bluebuild generate-iso --iso-name cosmos-andromeda.iso image ghcr.io/jacobleblanc-cs/andromeda
+
