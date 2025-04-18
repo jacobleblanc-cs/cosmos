@@ -56,6 +56,7 @@ modules:
   - type: script
     snippets:
       - "flatpak remote-add --if-not-exists --user flathub-full https://dl.flathub.org/repo/flathub.flatpakrepo"
+      - "mkdir -p /usr/share/gnome-shell/extensions/gjsosk@vishram1123.com/keycodes && tar -xvf /usr/share/gnome-shell/extensions/gjsosk@vishram1123.com/keycodes.tar.xz -C /usr/share/gnome-shell/extensions/gjsosk@vishram1123.com/keycodes"
     scripts:
       - installNix.sh
 
