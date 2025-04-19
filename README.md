@@ -11,12 +11,12 @@ Changes on this image so far:
  - Add Papirus icon theme
  - Install asus-linux packages for `andromeda`
  - Enable full flathub repo
- - Automatic installation of Nix with Flakes using the [Determinate Nix installer](https://github.com/DeterminateSystems/nix-installer) (Not yet fully functional)
+ - Automatically install my personal flatpaks
  
 
 ToDo:
+ - Automatic installation of Nix with Flakes using the [Determinate Nix installer](https://github.com/DeterminateSystems/nix-installer) (Not yet fully functional)
  - Automate nix configuration
- - Automate full flathub activation & flatpak installations
  - Add gsettings overrides
  - Add keybinds to recipe
 

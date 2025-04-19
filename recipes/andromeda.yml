@@ -21,7 +21,6 @@ modules:
     install:
       - tailscale
       - papirus-icon-theme
-      # - trayscale (Install this with flatpak once full flathub is enabled)
       - syncthing
       - sushi
       - asusctl
@@ -83,5 +82,15 @@ modules:
         - com.github.scrivanolabs.scrivano
         - com.github.flxzt.rnote
         - com.adilhanney.saber
+        - org.gnome.Podcasts
+        - io.gitlab.news_flash.NewsFlash
+        - org.gnome.Geary
+        - io.freetubeapp.FreeTube
+        - io.github.amit9838.mousam
+        - io.missioncenter.MissionCenter
+        - org.gnome.Connections
+        - org.gnome.Boxes
+        - org.onlyoffice.desktopeditors
+        - com.moonlight_stream.Moonlight
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
