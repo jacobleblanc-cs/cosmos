@@ -25,6 +25,7 @@ modules:
       - sushi
       - asusctl
       - asusctl-rog-gui
+      - btop
     replace:
       - from-repo: https://copr.fedorainfracloud.org/coprs/lukenukem/asus-kernel/repo/fedora-%OS_VERSION%/lukenukem-asus-kernel-fedora-%OS_VERSION%.repo
         packages:
@@ -50,6 +51,7 @@ modules:
       - 779 # Clipboard Indicator
       - Desktop Icons NG (DING)
       - Auto Move Windows
+      - 1070 # Syncthing Indicator
 
       
   - type: script
