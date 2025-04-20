@@ -5,7 +5,7 @@ description: My Laptop Configuration
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/secureblue/silverblue-main-hardened
-image-version: 41 # latest is also supported if you want new updates ASAP
+image-version: 42 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -26,6 +26,7 @@ modules:
       - asusctl
       - asusctl-rog-gui
       - btop
+      - gnome-shell-extension-appindicator
     replace:
       - from-repo: https://copr.fedorainfracloud.org/coprs/lukenukem/asus-kernel/repo/fedora-%OS_VERSION%/lukenukem-asus-kernel-fedora-%OS_VERSION%.repo
         packages:
@@ -40,17 +41,16 @@ modules:
 
   - type: gnome-extensions
     install:
-      - AppIndicator and KStatusNotifierItem Support
       - Dash to Dock
       - Screen Rotate
-      - GJS OSK
+      - GJS OSK # Doesn't support Gnome 48 yet
       - Caffeine
-      - Forge
+      - Forge # Doesn't support Gnome 48 yet
       - Just Perfection
       - GSConnect
       - 779 # Clipboard Indicator
-      - Desktop Icons NG (DING)
-      - Auto Move Windows
+      - 5263 # GTK4-DING
+      - 16 # Auto Move Windows
       - 1070 # Syncthing Indicator
 
       
