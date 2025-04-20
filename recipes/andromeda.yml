@@ -92,5 +92,12 @@ modules:
         - org.gnome.Boxes
         - org.onlyoffice.desktopeditors
         - com.moonlight_stream.Moonlight
+        - org.localsend.localsend_app
+        - org.torproject.torbrowser-launcher
+        - com.bitwarden.desktop
+        - com.spotify.Client
+        - com.heroicgameslauncher.hgl
+        - com.vysp3r.ProtonPlus
+        - com.valvesoftware.Steam
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
