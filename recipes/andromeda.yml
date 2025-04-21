@@ -46,9 +46,9 @@ modules:
     install:
       - Dash to Dock
       - Screen Rotate
-      - GJS OSK # Doesn't support Gnome 48 yet
+      # - GJS OSK # Doesn't support Gnome 48 yet
       - Caffeine
-      - Forge # Doesn't support Gnome 48 yet
+      # - Forge # Doesn't support Gnome 48 yet
       - Just Perfection
       - GSConnect
       - 779 # Clipboard Indicator
