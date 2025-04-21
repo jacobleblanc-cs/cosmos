@@ -12,10 +12,10 @@ Changes on this image so far:
  - Install asus-linux packages for `andromeda`
  - Enable full flathub repo
  - Automatically install my personal flatpaks
+ - Automatic installation of Nix with Flakes using the [Determinate Nix installer](https://github.com/DeterminateSystems/nix-installer)
  
 
 ToDo:
- - Automatic installation of Nix with Flakes using the [Determinate Nix installer](https://github.com/DeterminateSystems/nix-installer) (Not yet fully functional)
  - Automate nix configuration
  - Add gsettings overrides
  - Add keybinds to recipe
