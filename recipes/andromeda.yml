@@ -18,6 +18,7 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/lukenukem/asus-linux/repo/fedora-%OS_VERSION%/lukenukem-asus-linux-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/lukenukem/asus-kernel/repo/fedora-%OS_VERSION%/lukenukem-asus-kernel-fedora-%OS_VERSION%.repo
     install:
       - tailscale
       - papirus-icon-theme
@@ -27,17 +28,19 @@ modules:
       - asusctl-rog-gui
       - btop
       - gnome-shell-extension-appindicator
-    replace:
-      - from-repo: https://copr.fedorainfracloud.org/coprs/lukenukem/asus-kernel/repo/fedora-%OS_VERSION%/lukenukem-asus-kernel-fedora-%OS_VERSION%.repo
-        packages:
-          - kernel
-          - kernel-core
-          - kernel-modules
-          - kernel-uki-virt
-          - kernel-devel
-          - kernel-modules-extra
-          - kernel-modules-core
-          - kernel-devel-matched
+      - kernel-rog-cachyos
+      - kernel-rog-cachyos-devel-matched
+      #replace:
+      #  - from-repo: https://copr.fedorainfracloud.org/coprs/lukenukem/asus-kernel/repo/fedora-%OS_VERSION%/lukenukem-asus-kernel-fedora-%OS_VERSION%.repo
+      #    packages:
+      #      - kernel
+      #      - kernel-core
+      #      - kernel-modules
+      #      - kernel-uki-virt
+      #      - kernel-devel
+      #      - kernel-modules-extra
+      #      - kernel-modules-core
+      #      - kernel-devel-matched
 
   - type: gnome-extensions
     install:
