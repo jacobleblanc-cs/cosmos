@@ -18,7 +18,6 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/lukenukem/asus-linux/repo/fedora-%OS_VERSION%/lukenukem-asus-linux-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/lukenukem/asus-kernel/repo/fedora-%OS_VERSION%/lukenukem-asus-kernel-fedora-%OS_VERSION%.repo
     install:
       - tailscale
       - papirus-icon-theme
@@ -28,19 +27,6 @@ modules:
       - asusctl-rog-gui
       - btop
       - gnome-shell-extension-appindicator
-      - kernel-rog-cachyos
-      - kernel-rog-cachyos-devel-matched
-      #replace:
-      #  - from-repo: https://copr.fedorainfracloud.org/coprs/lukenukem/asus-kernel/repo/fedora-%OS_VERSION%/lukenukem-asus-kernel-fedora-%OS_VERSION%.repo
-      #    packages:
-      #      - kernel
-      #      - kernel-core
-      #      - kernel-modules
-      #      - kernel-uki-virt
-      #      - kernel-devel
-      #      - kernel-modules-extra
-      #      - kernel-modules-core
-      #      - kernel-devel-matched
 
   - type: gnome-extensions
     install:
@@ -58,9 +44,6 @@ modules:
 
       
   - type: script
-    # snippets:
-      # - "flatpak remote-add --if-not-exists --user flathub-full https://dl.flathub.org/repo/flathub.flatpakrepo"
-      # - "mkdir -p /usr/share/gnome-shell/extensions/gjsosk@vishram1123.com/keycodes && tar -xvf /usr/share/gnome-shell/extensions/gjsosk@vishram1123.com/keycodes.tar.xz -C /usr/share/gnome-shell/extensions/gjsosk@vishram1123.com/keycodes"
     scripts:
       - installNix.sh
 
