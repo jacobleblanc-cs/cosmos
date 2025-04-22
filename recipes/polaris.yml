@@ -1,11 +1,11 @@
 # image will be published to ghcr.io/<user>/<name>
 name: polaris
 # description will be included in the image's metadata
-description: My Workstation Configuration
+description: My Desktop Configuration
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/secureblue/silverblue-main-hardened
-image-version: 41 # latest is also supported if you want new updates ASAP
+image-version: 42 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -16,33 +16,88 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: rpm-ostree
-  #repos:
-      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/ilyaz/LACT/repo/fedora-%OS_VERSION%/ilyaz-LACT-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/lizardbyte/stable/repo/fedora-%OS_VERSION/lizardbyte-stable-fedora-%OS_VERSION%.repo
     install:
       - tailscale
       - papirus-icon-theme
-      - trayscale
       - syncthing
-      - gnome-shell-extension-appindicator
-      - gnome-shell-extension-caffeine
-      - gnome-shell-extension-dash-to-dock
-      - gnome-shell-extension-just-perfection
       - sushi
-      #remove:
-      #- type: default-flatpaks
-      #  notify: true # Send notification after install/uninstall is finished (true/false)
-      #  system:
-      #    # If no repo information is specified, Flathub will be used by default
-      #  repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-      #  repo-name: flathub
-      #  repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
-      #  install:
-      #    - io.github.zen_browser.zen
-      #    - com.mattjakeman.ExtensionManager
-      #    - com.github.tchx84.Flatseal
-      #    - md.obsidian.Obsidian
+      - btop
+      - gnome-shell-extension-appindicator
+      - neovim
+      - goverlay
+      - winetricks
+      - lact
+      - Sunshine
 
-      #    #remove:
-      #    # - org.gnome.eog
+  - type: gnome-extensions
+    install:
+      - Dash to Dock
+      - Caffeine
+      # - Forge # Doesn't support Gnome 48 yet
+      - Just Perfection
+      - GSConnect
+      - 779 # Clipboard Indicator
+      - 5263 # GTK4-DING
+      - 16 # Auto Move Windows
+      - 1070 # Syncthing Indicator
+      
+  - type: script
+    scripts:
+      - installNix.sh
+
+  - type: default-flatpaks
+    notify: true
+    user:
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub-full
+      repo-title: "Flathub (User)"
+      install:
+        - com.mattjakeman.ExtensionManager
+        - com.github.tchx84.Flatseal
+        - md.obsidian.Obsidian
+        - app.zen_browser.zen
+        - com.discordapp.Discord
+        - org.signal.Signal
+        - chat.delta.desktop
+        - chat.simplex.simplex
+        - im.riot.Riot
+        - ch.protonmail.protonmail-bridge
+        - dev.deedles.Trayscale
+        - app.bluebubbles.BlueBubbles
+        - com.github.johnfactotum.Foliate
+        - org.gnome.Podcasts
+        - io.gitlab.news_flash.NewsFlash
+        - org.gnome.Geary
+        - io.freetubeapp.FreeTube
+        - io.github.amit9838.mousam
+        - io.missioncenter.MissionCenter
+        - org.gnome.Connections
+        - org.gnome.Boxes
+        - org.onlyoffice.desktopeditors
+        - com.moonlight_stream.Moonlight
+        - org.localsend.localsend_app
+        - org.torproject.torbrowser-launcher
+        - com.bitwarden.desktop
+        - com.spotify.Client
+        - com.heroicgameslauncher.hgl
+        - com.vysp3r.ProtonPlus
+        - com.valvesoftware.Steam
+        - org.gnome.Loupe
+        - org.gnome.Decibels
+        - org.gnome.Totem
+        - org.gnome.Calendar
+        - org.gnome.NetworkDisplays
+        - com.dec05eba.gpu_screen_recorder
+        - io.github.trigg.discover_overlay
+        - io.gitlab.librewolf-community
+        - org.gnome.gitlab.YaLTeR.VideoTrimmer
+        - io.github.fizzyizzy05.binary
+        - io.gitlab.liferooter.TextPieces
+        - com.github.Matoking.protontricks
+        - page.tesk.Refine
+        - io.frama.tractor.carburetor
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
