@@ -43,6 +43,11 @@ modules:
       - 1070 # Syncthing Indicator
 
 
+  - type: script
+    scripts:
+      - nixPrep.sh
+
+
   - type: default-flatpaks
     notify: true
     user:
