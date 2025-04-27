@@ -1,0 +1,24 @@
+# image will be published to ghcr.io/<user>/<name>
+name: sirius
+# description will be included in the image's metadata
+description: My Server Configuration
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/secureblue/securecore-zfs-main-hardened
+image-version: testing # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
+  - type: rpm-ostree
+    install:
+      - tailscale
+      - btop
+      - neovim
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
