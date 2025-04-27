@@ -4,38 +4,38 @@
   home.username = "jacob";
   home.homeDirectory = "/var/home/jacob";
 
-  home.stateVersion = "24.05";
+  home.stateVersion = "24.11";
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
     (writeShellScriptBin "nix-upgrade" ''
-      home-manager switch --flake /var/home/jacob/cosmos/nix#jacob --impure
+      home-manager switch --flake /var/home/jacob/Nix#jacob --impure
     '')
     fira-code-nerdfont
     pfetch-rs
     cosign
-    qt5ct
-    qt6ct
-    cliphist
-    unstable.zed-editor
+    #qt5ct
+    #qt6ct
+    #cliphist
+    #unstable.zed-editor
     nixgl.auto.nixGLDefault
-    vscodium
+    #vscodium
   ];
 
 
   # Import applications with configurations from apps/ directory
   imports = [
-    ./apps/kitty.nix
-    ./apps/neovim.nix
-    ./apps/nix-direnv.nix
-    ./apps/zsh.nix
-    ./apps/btop.nix
+  #  ./apps/kitty.nix
+  #  ./apps/neovim.nix
+  #  ./apps/nix-direnv.nix
+  #  ./apps/zsh.nix
+  #  ./apps/btop.nix
     ./apps/git.nix
-    ./apps/bash.nix
-    ./apps/starship.nix
-    ./apps/spotify.nix
-    ./apps/zathura.nix
+  #  ./apps/bash.nix
+  #  ./apps/starship.nix
+  #  ./apps/spotify.nix
+  #  ./apps/zathura.nix
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
